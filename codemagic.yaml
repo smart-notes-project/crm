@@ -10,12 +10,4 @@
           scripts:
     # ....
   
-    script: | 
-      echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/local.properties"
-  
-    script: | 
-      ./gradlew bundleRelease # -> to create the .aab
-      # gradlew assembleRelease # -> to create the .apk
 
-artifacts:
-  - app/build/outputs/**/*.aab
